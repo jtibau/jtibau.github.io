@@ -1,8 +1,10 @@
 ---
 layout: page
-title: My Blog
-tagline: Ph.D. CS Student at VT
+title: jatb - Ramblings
 ---
 {% include JB/setup %}
 
-This is clearly a work in (very early) progress.
+{% for post in site.posts %}
+  <h3>{{ post.title }}</h3>
+  {{ post.content }}
+{% endfor %}
