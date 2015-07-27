@@ -7,7 +7,7 @@ description: ""
 
 I was born in Guayaquil, a large city on the coast of Ecuador. I love to travel and have had the pleasure to experience living in Barcelona, Spain as well as Little Rock, Arkansas. My current place of residence is Blacksburg, Virginia where I am a Ph.D. Student in the <a href='http://www.cs.vt.edu/'>Computer Science</a> program at <a href='http://www.vt.edu'>Virginia Tech</a>.
 
-My research interests are in HCI, specially in Virtual Reality. As new technologies are bringing this field to the masses I believe it is one of the most exciting areas of study at the moment.
+My research interests are in HCI and social computing. I am working with [Steve Harrison](http://thirdlab.cs.vt.edu/people/steve-harrison/) and [Deborah Tatar](http://thirdlab.cs.vt.edu/people/deborah-tatar/) on Media Spaces. Tatar and Harrison lead the [Third Lab](http://thirdlab.cs.vt.edu/) group at VT focusing on different aspects of the "phenomenologies of technology and interpersonal relations".
 
 You can follow my blog [here](/). Although content is scant at the moment, I will try to keep it up-to-date with my research, school projects and interesting assignments.
 
@@ -21,9 +21,7 @@ Education
 Research
 ========
 
-My research interests are in Human-Computer Interaction, Virtual Reality, Cognitive Psychology and CS Education. More speciffically, my research focus is on understanding naturalness and  affordances to improve the design of interaction techniques in virtual environments.
-
-I am currently looking for an advisor at VT. I have been attending various research group meetings as well as used this opportunity to have interesting conversations with the faculty here. As I am interested in HCI, the breath of opportunities offered by VT is stunning to me. I hope to update this section soon as I get more involved in the research being done by some of my professors and peers.
+My research interests are in Human-Computer Interaction, Social Computing and CS Education. I am currently studying Media Spaces in the home and inter-generational-sharing of experiences through music.
 
 Awards
 ======
