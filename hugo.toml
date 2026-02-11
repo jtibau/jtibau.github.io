@@ -1,0 +1,62 @@
+baseURL = "https://www.javiertibau.com/"
+languageCode = "en-us"
+title = "Javier Tibau"
+theme = "PaperMod"
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  description = "Product-oriented software engineer and human-centered designer building user-centric systems."
+  author = "Javier Tibau"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+
+  [params.profileMode]
+    enabled = true
+    title = "Javier Tibau"
+    subtitle = "Product-oriented Software Engineer & Human-Centered Designer"
+
+    [[params.profileMode.buttons]]
+      name = "Projects"
+      url = "/projects/"
+    [[params.profileMode.buttons]]
+      name = "Experience"
+      url = "/experience/"
+    [[params.profileMode.buttons]]
+      name = "CV"
+      url = "/cv/"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/jtibau"
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:javier@javiertibau.com"
+
+[menu]
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 10
+  [[menu.main]]
+    name = "Experience"
+    url = "/experience/"
+    weight = 20
+#   [[menu.main]]
+#     name = "Writing"
+#     url = "/posts/"
+#     weight = 30
+  [[menu.main]]
+    name = "CV"
+    url = "/cv/"
+    weight = 40
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 50

@@ -1,0 +1,19 @@
+# Hugo build output
+public/
+resources/
+.hugo_build.lock
+
+# macOS
+.DS_Store
+
+# VS Code (optional)
+.vscode/
+
+# Logs
+*.log
+
+# Node (if ever added later)
+node_modules/
+
+# Env files
+.env
