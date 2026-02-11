@@ -21,6 +21,10 @@ enableRobotsTXT = true
     enabled = true
     title = "Javier Tibau"
     subtitle = "Product-oriented Software Engineer & Human-Centered Designer"
+    imageUrl = "/images/JavierTibau.jpeg"
+    imageWidth = 120
+    imageHeight = 120
+    imageTitle = "Javier Tibau (portrait)"
 
     [[params.profileMode.buttons]]
       name = "Projects"
