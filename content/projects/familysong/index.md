@@ -2,7 +2,7 @@
 title = "FamilySong"
 date = 2026-03-03T00:00:00-05:00
 # draft = true
-description = "Designing a tangible, asynchronous music-sharing system for internationally distributed families."
+description = "Designing a tangible music-sharing system that supports shared, synchronous experiences for internationally distributed families."
 +++
 
 <nav>
@@ -12,9 +12,9 @@ description = "Designing a tangible, asynchronous music-sharing system for inter
     <li><a href="#approach">From Observation to Design</a></li>
     <li><a href="#tensions">Design Tensions</a></li>
     <li><a href="#iterations">Iterations</a></li>
-    <li><a href="#system">System</a></li>
-    <li><a href="#deployment">Deployment</a></li>
-    <li><a href="#insights">Insights</a></li>
+    <li><a href="#system">System Overview</a></li>
+    <li><a href="#deployment">In-Home Deployment</a></li>
+    <li><a href="#insights">Key Insights</a></li>
   </ul>
 </nav>
 
@@ -22,7 +22,7 @@ description = "Designing a tangible, asynchronous music-sharing system for inter
 
 ## TL;DR {#tldr}
 
-FamilySong is a tangible music-sharing system designed to help geographically distributed families stay connected through shared musical experiences. I designed and built a set of networked music boxes that allowed families in different homes to play music together asynchronously. Through multiple prototypes and in-home deployments with real families, the project explored how music can support connection when conversation breaks down—especially for young children.
+FamilySong is a tangible music-sharing system designed to help geographically distributed families stay connected when conversational interaction breaks down—especially for very young children. I designed and built a set of networked music boxes that allowed families in different homes to share music in ways that created togetherness and mutual awareness across distance. Through multiple prototypes and in-home deployments with real families, the project explored how shared musical experiences can support connection, cultural exchange, and everyday family life.
 
 ## When Video Calls Stop Working {#problem}
 
@@ -69,9 +69,9 @@ The breakdown during those singing moments made it clear that the problem was no
 
 Singing together highlighted this tension. Music created a structure that allowed Emma to participate even when language and attention were limited. But music also required coordination, and even small delays in the network disrupted that shared rhythm.
 
-Around this time I was also discussing these challenges with my colleague [Michael Stewart](https://www.jmu.edu/cise/people/faculty/stewart-michael.shtml), who was developing his dissertation project *[CoListen](https://thirdlab.cs.vt.edu/mediated-life/togetherness/)*. His work explored synchronous shared music experiences between school‑aged children in different locations. While our contexts and design constraints were quite different, our conversations often revolved around a similar question: how music might act as a medium for connection across distance. Those discussions helped sharpen my thinking about what role music could play in supporting family relationships at a distance.
+Around this time I was also discussing these challenges with my colleague [Michael Stewart](https://www.jmu.edu/cise/people/faculty/stewart-michael.shtml), who was developing his dissertation project *[CoListen](https://thirdlab.cs.vt.edu/mediated-life/togetherness/)*. His work explored synchronous shared music experiences between school-aged children in different locations. While our contexts and design constraints were quite different, our conversations often revolved around a similar question: how music might act as a medium for connection across distance. Those discussions helped sharpen my thinking about what role music could play in supporting family relationships at a distance.
 
-Rather than trying to improve video calls or reduce latency—problems that were technically beyond my ability to solve—I began exploring a different question: What would it look like to design for **shared musical experiences across distance without requiring real‑time coordination?**
+Rather than trying to improve video calls or eliminate latency altogether—problems that were technically beyond my ability to solve—I began exploring a different question: What would it look like to design for **shared musical experiences across distance that were synchronous enough to feel meaningful without requiring conversational real-time coordination?**
 
 This shift reframed the problem entirely. Instead of focusing on communication technologies designed for talking, the goal became designing **a system where music itself could become the medium through which families stayed connected.**
 
@@ -120,11 +120,11 @@ To coordinate playback between homes, I implemented a small NodeJS server using 
 
 - Whether two distant homes could reliably share music playback  
 - How MPD players could be coordinated through a lightweight server  
-- Whether a slightly imperfect synchronization would still feel like a shared musical experience  
+- Whether slightly imperfect synchronization could still feel synchronous enough to support a shared musical experience  
 
 **Lessons learned**
 
-Technically, the prototype worked. Music could be triggered in one home and played in the other. The playback was not perfectly synchronized—the two systems typically drifted by about three seconds—but this delay did not appear to break the shared listening experience.
+Technically, the prototype worked. Music could be triggered in one home and played in the other. The playback was not perfectly synchronized—the two systems typically drifted by about three seconds—but this delay did not appear to break the shared listening experience. Instead, it still seemed synchronous enough for families to experience the music as something they were sharing together across homes.
 
 More significant limitations quickly emerged elsewhere. Because each Raspberry Pi stored its own local music catalog, expanding or updating the song library remotely proved difficult. Managing and synchronizing music collections across homes did not scale well.
 
@@ -166,37 +166,93 @@ The new streaming architecture successfully solved the catalog management proble
 
 In practice, the streams typically differed by roughly **2–10 seconds**. Participants did not appear to find this particularly disruptive, and we eventually implemented simple mechanisms to reset the clients and clear their buffers to bring the streams back into rough alignment.
 
-More importantly, this iteration reinforced a key design insight: perfect synchronization was far less important than **the experience of hearing the same music across homes**. Even with small temporal differences, participants still experienced the system as a shared musical environment connecting the two households.
+More importantly, this iteration reinforced a key design insight: perfect synchronization was less important than whether the experience still felt **synchronous enough to support hearing the same music across homes together**. Even with small temporal differences, participants still experienced the system as a shared musical environment connecting the two households.
 
 ### Prototype 3 — Giving Children Agency
 
 **Impetus**
 
-While the previous iterations improved the technical infrastructure and broadened access to music, they still depended largely on adults to select what was played. In practice, this meant that the shared musical experience often began with an adult opening a phone interface and choosing a song. For very young children, this limited their ability to participate meaningfully in initiating those moments of connection.
+While earlier iterations improved the technical infrastructure of the system, they still depended largely on adults to initiate the shared musical experience. In practice, this meant that moments of connection often began with an adult opening a phone interface and choosing a song.
 
-The goal of this final prototype was therefore to explore how the system could give **young children direct agency** in the process of selecting and sharing music between homes. Instead of relying on screens or phone interfaces, the design shifted toward tangible interaction that could be easily understood and manipulated by children.
+For very young children, this limited their ability to participate meaningfully in starting those interactions.
+
+The goal of this third prototype was therefore to explore how the system could give **young children direct agency** in selecting and sharing music between homes while further reinforcing the idea that FamilySong should exist as a standalone object in the home rather than as another application running on a personal device. Instead of relying on screens or mobile interfaces, this iteration focused on tangible interaction that children could understand and manipulate as part of everyday play.
 
 **What this prototype explored**
 
-This iteration introduced a pair of **tangible music boxes** placed in each household. The boxes were designed as simple, durable objects that children could interact with directly as part of their everyday play.
+This iteration introduced a pair of **tangible music boxes**, one placed in each household. Unlike earlier prototypes that relied on existing speakers and lightweight Raspberry Pi setups, this version of the system was designed as a complete standalone artifact that could comfortably live within the home.
 
-Instead of browsing a music catalog on a screen, songs were associated with physical tokens placed on top of the box. Selecting music became a physical activity: placing an object triggered the system to begin playing the corresponding song in both homes.
+Each box contained a Raspberry Pi, an RFID reader positioned on the top surface with clear affordances for placing the CardSongs, a small touchscreen used for lightweight controls and presence indicators, and a pair of reasonably good speakers. A physical volume knob was included but intentionally placed somewhat out of view so that the device retained the feel of a simple household object rather than a piece of exposed technology.
 
-This approach allowed children to initiate shared musical moments themselves. A child could choose a song, start the music, and know that the same music would begin playing in the other household as well.
+I also designed and built bespoke enclosures for the devices using locally sourced hardwood combined with several 3D-printed components. The goal was to create objects that families could comfortably place in shared spaces such as a living room or coffee table. Rather than looking like experimental hardware, the boxes were meant to resemble domestic artifacts that naturally blended into the home.
 
 **Lessons learned**
 
-Introducing tangible interaction dramatically changed how the system was used. Children who were previously passive participants during music playback began initiating songs on their own, often as part of normal play activities.
+Introducing tangible interaction significantly changed how the system was used.
 
-The physical design also helped integrate the system into everyday household routines. The music boxes were treated less like technological devices and more like familiar objects within the home.
+Children who had previously been passive listeners began actively initiating songs themselves. In many cases, they treated the music box less like a technological device and more like a toy integrated into their daily routines.
 
-Perhaps most importantly, this iteration demonstrated that meaningful connection between distant families did not require complex interfaces. By giving children a simple way to initiate shared musical moments, the system allowed interaction to emerge naturally within daily life.
+This change also shifted the role of adults. Instead of acting as gatekeepers who controlled music selection through phones or computers, adults became participants in musical moments that children could initiate.
 
-## System overview {#system}
-(Hardware + software + backend. Enough detail to show engineering depth.)
+Perhaps most importantly, this prototype revealed that the system worked best **alongside** other communication technologies rather than replacing them. FamilySong rarely became the primary medium of interaction between households. Instead, its presence quietly shaped other moments of communication.
 
-## In-home deployment {#deployment}
-(Who, how long, what happened, what surprised you.)
+During later video calls between families, participants suddenly had shared experiences to talk about: songs that had been played earlier in the day, drawings children had made on the CardSongs, or moments when music unexpectedly appeared in the other household. In this sense, the most powerful effect of the system was often not visible during direct use, but in the conversations and stories that emerged afterward.
 
-## Key insights {#insights}
-(Transferable lessons. What you’d do differently today.)
+<!-- --- -->
+> “Later on the video call we would say, ‘We heard you playing that song earlier!’
+> Suddenly we had something to talk about.”
+>
+> — Grandparent participant
+<!-- --- -->
+
+Rather than competing with video calls or messaging technologies, FamilySong created small moments of shared activity that generated togetherness and connection across homes. The system filled everyday domestic moments in a quiet, non-intrusive way: music could appear in the background while people continued cooking, playing, working, or simply moving through their daily routines. In this sense, FamilySong attempted to recover something that many families once experienced through broadcast media such as live television or radio—shared cultural moments that later became topics of conversation. Instead of requiring explicit coordination, the system allowed those moments to emerge naturally. When families later connected through video calls, they often discovered they had already shared something earlier in the day through music, bringing back a sense of effortless togetherness without burdening anyone with the task of organizing it.
+
+## System Overview {#system}
+
+The full technical architecture of FamilySong — including the Raspberry Pi hardware design, RFID token system, streaming infrastructure, and coordination server — is described in a separate technical deep-dive.
+
+This case study focuses primarily on the design journey and the interaction insights that emerged from the project.
+
+→ **Work in progress:** [Building the FamilySong System](#)
+
+---
+
+## In-Home Deployment {#deployment}
+
+Details about the multi-family in-home deployment — including how families were recruited, how long the devices were used in each home, and what daily usage patterns emerged — will be documented in a separate article.
+
+→ **Work in progress:** [Deploying FamilySong in Real Homes](#)
+
+## Key Insights {#insights}
+
+Looking across the full design journey, FamilySong revealed several insights about how technologies can support connection in geographically distributed families.
+
+### Passive Shared Experiences Can Create Shared Narratives
+
+Other researchers and designers had already shown that purposeful shared activities such as reading together, playing games, or teaching can help remote relatives engage very young children in meaningful interaction. Many of those systems focused primarily on one-to-one relationships such as child‑grandparent, child‑remote parent, or adult child‑elder parent dyads.
+
+FamilySong explored a different but complementary possibility: that passive shared experiences could foster meaningful connection across a broader family group, in which different people participated with different intentions, levels of attention, and emotional stakes. By hearing the same music in different homes—even without direct coordination—families developed shared reference points, stories, and later conversations that extended beyond the moment of listening itself.
+
+In this sense, FamilySong did not only affect one relationship at a time. The shared musical moments could simultaneously shape interactions between children and grandparents, parents and their in‑laws, and the family as a whole.
+
+### Connection Can Grow in the Background
+
+FamilySong suggested that meaningful connection does not always require focused interaction. Instead of demanding attention like a phone call or video chat, the system was designed to live quietly in the background of everyday life. Music could appear while people cooked, worked, played, or moved through their routines without requiring anyone to stop what they were doing.
+
+Rather than acting as a primary communication channel, FamilySong created small shared moments that later resurfaced in conversations between homes. We sometimes compared this effect to *umami*: not the main flavor in the meal, but an element that intensifies and enriches everything around it.
+
+### Family Technologies Work Best When They Complement Existing Communication Habits
+
+FamilySong suggested that technologies for family connection work best when they build on communication practices that families already value. From the beginning, the system was designed to work alongside tools such as WhatsApp, Facebook, FaceTime, and video calls rather than replace them. This proved essential. **Some of the most meaningful outcomes of the system were not visible during direct use, but emerged later when families connected through those other channels** and suddenly had something new to talk about, sing about, or remember together.
+
+### Tangible Artifacts Can Reify Connection
+
+The music boxes and CardSongs were not only interfaces; they became meaningful domestic artifacts. Families decorated, reused, and cared for them in ways that reflected ownership, affection, and memory. In this sense, the system helped reify connection by giving distant relationships a material presence in the home.
+
+During early deployments in my parents’ home, my father—one of the first participants—likened music to taste and smell: sensory experiences that become powerful carriers of memory, capable of recalling people, places, and moments across decades. FamilySong suggested that music, objects, and small rituals can work together in a similar way. The boxes and CardSongs do not merely support interaction; they **give families something to keep, personalize, and cherish** as part of their everyday lives.
+
+### Designing for Children's Agency Can Strengthen the Whole Family System
+
+When children were able to initiate music for themselves, they did not simply gain control over playback. They became active participants in sustaining the connection between homes. These small acts of agency allowed children to trigger shared moments that grandparents could recognize and interpret, often giving those interactions a meaning that extended beyond the music itself.
+
+For several grandparents—many in their seventies or eighties—these moments carried particular emotional weight. According to both them and their adult children, the interactions became one of the few ways they felt they could convey pieces of culture, language, and identity to grandchildren growing up in a very different environment. Over time, some children even began associating particular songs with specific relatives—moments like saying *"this is grandpa's song"*—turning the music into a small but meaningful thread connecting generations across distance.
