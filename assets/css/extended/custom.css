@@ -18,6 +18,32 @@
   text-align: center;
 }
 
+/* Tags on list cards */
+.entry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.4em;
+  padding: 0.3em 0.8em 0;
+}
+
+.entry-tags .tag,
+.post-tags-header .tag {
+  font-size: 0.75em;
+  padding: 0.15em 0.5em;
+  background: var(--code-bg);
+  border-radius: 4px;
+  color: var(--secondary);
+}
+
+/* Tags below cover image on article pages */
+.post-tags-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin: 0.75em 0 1.5em;
+}
+
 /* Floated figures (like distance.png) — keep float but match styling */
 .post-content figure[style*="float"] {
   max-width: none;
