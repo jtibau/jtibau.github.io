@@ -9,4 +9,4 @@ FamilySong grew out of that approach. I designed the research, soldered the hard
 
 I spent over a decade in academia teaching HCI, programming, and game design, while building and studying systems in the real world. Now I want to apply that perspective in industry, where thoughtful engineering and design rigor can drive product impact for millions of people.
 
-Outside of work, I build things. I've designed and wired networking, security, and IoT systems for two homes, including one I helped design and build from the ground up. I also spend time woodworking, tinkering with electronics, and maintaining a homelab. When I'm not building something, I'm probably trying a new videogame, on a tennis court, or in the kitchen.
+Outside of work, I build things. I've designed and wired networking, security, and IoT systems for two homes, including one I helped design and build from the ground up. I also spend time woodworking, tinkering with electronics, and maintaining a homelab. When I'm not building something, I'm probably on a tennis court, in the kitchen, or trying a new videogame.

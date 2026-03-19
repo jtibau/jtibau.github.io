@@ -23,8 +23,8 @@ enableRobotsTXT = true
     title = "Javier Tibau"
     subtitle = "I design, build, and deploy interactive systems to understand how people actually use them — from research question to working prototype to families' living rooms."
     imageUrl = "/images/JavierTibau.jpeg"
-    imageWidth = 120
-    imageHeight = 120
+    imageWidth = 150
+    imageHeight = 150
     imageTitle = "Javier Tibau (portrait)"
 
   [[params.socialIcons]]
