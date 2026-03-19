@@ -16,29 +16,23 @@ enableRobotsTXT = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
+  mainSections = ["projects"]
 
   [params.profileMode]
     enabled = true
     title = "Javier Tibau"
-    subtitle = "Product-oriented Software Engineer & Human-Centered Designer"
+    subtitle = "I design, build, and deploy interactive systems to understand how people actually use them — from research question to working prototype to families' living rooms."
     imageUrl = "/images/JavierTibau.jpeg"
     imageWidth = 120
     imageHeight = 120
     imageTitle = "Javier Tibau (portrait)"
 
-    [[params.profileMode.buttons]]
-      name = "Projects"
-      url = "/projects/"
-    [[params.profileMode.buttons]]
-      name = "Experience"
-      url = "/experience/"
-    [[params.profileMode.buttons]]
-      name = "CV"
-      url = "/cv/"
-
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/jtibau"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/javiertibau"
   [[params.socialIcons]]
     name = "email"
     url = "mailto:javier@javiertibau.com"
@@ -55,10 +49,10 @@ enableRobotsTXT = true
     name = "Projects"
     url = "/projects/"
     weight = 10
-  [[menu.main]]
-    name = "Experience"
-    url = "/experience/"
-    weight = 20
+#   [[menu.main]]
+#     name = "Experience"
+#     url = "/experience/"
+#     weight = 20
 #   [[menu.main]]
 #     name = "Writing"
 #     url = "/posts/"

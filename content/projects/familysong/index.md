@@ -3,7 +3,7 @@ title = "FamilySong"
 date = 2026-03-03T00:00:00-05:00
 lastmod = 2026-03-18T00:00:00-05:00
 weight = 1
-tags = ["product thinking", "user research", "prototyping", "interaction design", "field deployment"]
+tags = ["UX Research", "product thinking", "prototyping", "interaction design", "field deployment"]
 description = "Designing, building, and deploying networked music boxes that helped 6 families across 12 households stay connected through shared music."
 
 [cover]

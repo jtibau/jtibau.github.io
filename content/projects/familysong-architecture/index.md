@@ -1,16 +1,29 @@
 +++
-title = "FamilySong: System Architecture"
+title = "Building a Networked Music Box"
 date = 2026-03-18T00:00:00-05:00
 weight = 2
-tags = ["full-stack", "Node.js", "Docker", "Raspberry Pi", "IoT", "WebSockets"]
+tags = ["Full-Stack Development", "Node.js", "Docker", "Raspberry Pi", "IoT", "WebSockets"]
 description = "How I designed and built the software and hardware stack behind FamilySong — from Raspberry Pi clients to Dockerized per-family servers."
 # draft = true
 
-# [cover]
-# image = "../familysong/images/p3_arch.png"
-# alt = "FamilySong system architecture diagram"
-# relative = true
+[cover]
+image = "images/developing_fs.jpeg"
+alt = "Developing FamilySong: a prototype box alongside debugging and development windows"
+relative = true
 +++
+
+<nav>
+  <ul>
+    <li><a href="#the-problem-architecturally">The Problem, Architecturally</a></li>
+    <li><a href="#system-overview">System Overview</a></li>
+    <li><a href="#the-hardest-engineering-problem-stream-synchronization">Stream Synchronization</a></li>
+    <li><a href="#keeping-it-running-reliability-in-the-real-world">Reliability in the Real World</a></li>
+    <li><a href="#what-id-do-differently">What I'd Do Differently</a></li>
+    <li><a href="#tech-stack-summary">Tech Stack Summary</a></li>
+  </ul>
+</nav>
+
+---
 
 I was the sole engineer on FamilySong. Over 3 years, I built every layer of the system — from soldering GPIO pins to managing Docker containers in production — growing it from a single Raspberry Pi playing MP3s into a networked platform serving 6 families across 12 households.
 
@@ -58,6 +71,11 @@ Each family's stack was fully independent. A problem in one family's containers 
 A single shared [MySQL](https://www.mysql.com/) database across all families collected anonymized event data for research analysis. In practice, the most valuable table ended up being a simple event log — each row storing a serialized JSON payload with all relevant IDs and metadata. If I were to do it again, I'd use a document database like [MongoDB](https://www.mongodb.com/) for event logging, since the schema naturally evolved toward unstructured data.
 
 ### The Raspberry Pi Client
+
+<figure style="float: right; width: 30%; margin: 0 0 1em 1.5em;">
+<img src="images/two_boxes.jpeg" alt="Two finished FamilySong boxes stacked, showing the wooden enclosure and touchscreen" />
+<figcaption>Two FamilySong boxes ready for deployment.</figcaption>
+</figure>
 
 Each household got a Raspberry Pi running Raspbian, configured to boot automatically on power-up into a working state with no manual intervention. The Pi was intentionally kept simple — a thin client, not a smart one.
 
