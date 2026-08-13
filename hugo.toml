@@ -8,7 +8,7 @@ enableRobotsTXT = true
   pagerSize = 10
 
 [params]
-  description = "Product-oriented software engineer and human-centered designer building user-centric systems."
+  description = "Associate Professor of Computer Science at Virginia Commonwealth University, with a background in human-computer interaction and building user-centric systems."
   author = "Javier Tibau"
   defaultTheme = "auto"
   ShowReadingTime = true
@@ -21,7 +21,7 @@ enableRobotsTXT = true
   [params.profileMode]
     enabled = true
     title = "Javier Tibau"
-    subtitle = "I design, build, and deploy interactive systems to understand how people actually use them — from research question to working prototype to families' living rooms."
+    subtitle = "Associate Professor of Computer Science at Virginia Commonwealth University."
     imageUrl = "/images/JavierTibau.jpeg"
     imageWidth = 150
     imageHeight = 150
@@ -49,10 +49,6 @@ enableRobotsTXT = true
     name = "Projects"
     url = "/projects/"
     weight = 10
-#   [[menu.main]]
-#     name = "Experience"
-#     url = "/experience/"
-#     weight = 20
 #   [[menu.main]]
 #     name = "Writing"
 #     url = "/posts/"

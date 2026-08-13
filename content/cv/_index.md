@@ -11,6 +11,11 @@ title = 'CV'
 ## Experience
 
 ### Associate Professor of Computer Science
+**Virginia Commonwealth University** — Richmond, Virginia | 2026–Present
+
+Teaching CMSC 210 (Computers and Programming, online) and CMSC 256 (Introduction to Data Structures, in-person and online sections).
+
+### Associate Professor of Computer Science
 **Escuela Superior Politecnica del Litoral (ESPOL)** — Guayaquil, Ecuador | 2019–2024
 
 Conducted HCI research using qualitative and mixed-methods approaches. Designed curricula for flipped-classroom courses in Programming (Python, Java, C++), Human-Computer Interaction (storyboards, wireframing, user stories, interviewing), and Game Design (ideation, game mechanics, playtesting).
